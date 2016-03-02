@@ -139,6 +139,10 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Alluxio</li>
+
+<li>Apache Spark</li>
+
 <li>Footnotes Macro</li>
 
 <li>Footnotes Stylesheet</li>
@@ -6213,7 +6217,7 @@ Error message and password prompt
 <div created="20160302003735931" modified="20160302004434365" title="$:/SiteTitle">
 <pre>Techno Fomo</pre>
 </div>
-<div created="20160302010425679" modified="20160302011701498" title="$:/state/showeditpreview">
+<div created="20160302010425679" modified="20160302014306608" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20160302004134670" modified="20160302004136515" title="$:/state/sidebar">
@@ -6222,7 +6226,7 @@ Error message and password prompt
 <div created="20160302004517676" modified="20160302011812898" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div list="[[Pipeline DB]] GettingStarted" title="$:/StoryList">
+<div list="Alluxio [[Apache Spark]] [[Pipeline DB]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -6343,6 +6347,60 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20160302015008859" modified="20160302023645723" tags="" title="Alluxio">
+<pre>!Overview
+
+Alluxio (previously called Tachyon) is an open source, memory-centric, distributed, and reliable storage system enabling data sharing across clusters at memory speed.&lt;&lt;ref &quot;1&quot;&gt;&gt;
+
+Alluxio extends the concept of lineage from Spark RDDs to the data storage layer. Fault tolerance is achieved by replaying the tasks that created the data.
+
+Alluxio provides access to data through a filesystem interface. Files in Alluxio offer write-once semantics: they become immutable after they have been written in their entirety and cannot be read before being completed.
+
+!Milestones
+
+Alluxio 1.0.0 released February 23, 2016
+
+!Availability
+
+Alluxio is available under the Apache License 2.0.
+
+!Additional Information
+
+[[alluxio.org|http://alluxio.org]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;http://alluxio.org/documentation/master/en/&quot;&gt;&gt;
+
+</pre>
+</div>
+<div created="20160302012606827" modified="20160302014325695" tags="" title="Apache Spark">
+<pre>!Overview
+
+Apache Spark is a fast and general-purpose cluster computing system. It provides high-level APIs in Java, Scala, Python and R, and an optimized engine that supports general execution graphs. It also supports a rich set of higher-level tools including Spark SQL for SQL and structured data processing, MLlib for machine learning, ~GraphX for graph processing, and Spark Streaming&lt;&lt;ref &quot;1&quot;&gt;&gt;.
+
+The main abstraction in Spark is that of a resilient distributed dataset (RDD), which represents a read-only collection of objects partitioned across a set of machines that can be rebuilt if a partition is lost. RDDs are fault-tolerant, parallel data structures that let users explicitly persist intermediate results in memory, control their partitioning to optimize data placement, and manipulate them using a rich set of operators. RDDs provide an interface based on coarse-grained transformations (e.g., map, filter and join) that apply the same operation to many data items. This allows them to efficiently provide fault tolerance by logging the transformations used to build a dataset (its lineage) rather than the actual data. If a partition of an RDD is lost, the RDD has enough information about how it was derived from other RDDs to recompute just that partition&lt;&lt;ref &quot;2&quot;&gt;&gt;.
+
+!Milestones
+
+Spark 1.6.0 released January 6, 2016
+
+!Availability
+
+Apache Spark is available under the Apache License 2.0.
+
+!Additional Information
+
+[[spark.apache.org|https://spark.apache.org]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;https://spark.apache.org/docs/latest/index.html&quot;&gt;&gt;
+&lt;&lt;footnotes &quot;2&quot; &quot;Resilient Distributed Datasets: A Fault-Tolerant Abstraction for
+In-Memory Cluster Computing (Zaharia et al, 2011)&quot;&gt;&gt;
+
+</pre>
 </div>
 <div created="20160302010254199" modified="20160302010401740" tags="$:/tags/Macro" title="Footnotes Macro">
 <pre>\define ref(label)
