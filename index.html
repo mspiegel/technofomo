@@ -139,6 +139,10 @@ Error message and password prompt
 
 <li>$:/state/tab/sidebar--1835078512</li>
 
+<li>$:/state/toc/TableOfContents-Databases--81657105</li>
+
+<li>$:/state/toc/TableOfContents-Programming Languages--81657105</li>
+
 <li>$:/StoryList</li>
 
 <li>$:/temp/info-plugin</li>
@@ -153,6 +157,8 @@ Error message and password prompt
 
 <li>Apache Spark</li>
 
+<li>Data Structures</li>
+
 <li>Databases</li>
 
 <li>Distributed Systems</li>
@@ -163,6 +169,8 @@ Error message and password prompt
 
 <li>Go</li>
 
+<li>Merkle Tree</li>
+
 <li>Pipeline DB</li>
 
 <li>Programming Languages</li>
@@ -170,6 +178,8 @@ Error message and password prompt
 <li>Rust</li>
 
 <li>TableOfContents</li>
+
+<li>WebAssembly</li>
 
 <li>Welcome</li>
 
@@ -6262,6 +6272,12 @@ Error message and password prompt
 <div created="20160302004517676" modified="20160304020500222" title="$:/state/tab/sidebar--1835078512">
 <pre>TableOfContents</pre>
 </div>
+<div created="20160306053104673" modified="20160317171710822" title="$:/state/toc/TableOfContents-Databases--81657105">
+<pre>close</pre>
+</div>
+<div created="20160306050836073" modified="20160306053140222" title="$:/state/toc/TableOfContents-Programming Languages--81657105">
+<pre>close</pre>
+</div>
 <div list="Welcome" title="$:/StoryList">
 <pre></pre>
 </div>
@@ -6441,6 +6457,13 @@ In-Memory Cluster Computing (Zaharia et al, 2011)&quot;&gt;&gt;
 
 </pre>
 </div>
+<div created="20160306052918351" modified="20160306053138006" tags="TableOfContents" title="Data Structures">
+<pre>In computer science, a data structure is a particular way of organizing data in a computer so that it can be used efficiently. Different kinds of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks. Data structures provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. Usually, efficient data structures are key to designing efficient algorithms.
+
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc-selective-expandable &quot;Data Structures&quot;&gt;&gt;
+&lt;/div&gt;</pre>
+</div>
 <div created="20160302165745243" modified="20160302170033940" tags="TableOfContents" title="Databases">
 <pre>A database is a set of data that has a regular structure and that is organized in such a way that a computer can easily find the desired information. Data is a collection of distinct pieces of information, particularly information that has been formatted (i.e., organized) in some specific way for use in analysis or making decisions.
 
@@ -6521,6 +6544,19 @@ Go is distributed under a BSD-style license.
 &lt;&lt;footnotes &quot;1&quot; &quot;https://golang.org/doc&quot;&gt;&gt;
 &lt;&lt;footnotes &quot;2&quot; &quot;https://golang.org/doc/faq#ancestors&quot;&gt;&gt;</pre>
 </div>
+<div created="20160306053342588" modified="20160306053719583" tags="[[Data Structures]]" title="Merkle Tree">
+<pre>!Overview
+
+In cryptography and computer science, a hash tree or Merkle tree is a tree in which every non-leaf node is labelled with the hash of the labels or values (in case of leaves) of its child nodes. Hash trees are useful because they allow efficient and secure verification of the contents of large data structures. Hash trees are a generalization of hash lists and hash chains.
+
+Demonstrating that a leaf node is a part of the given hash tree requires processing an amount of data proportional to the logarithm of the number of nodes of the tree; this contrasts with hash lists, where the amount is proportional to the number of nodes.
+
+The concept of hash trees is named after Ralph Merkle who patented it in 1979.
+
+!! Uses
+
+Hash trees can be used to verify any kind of data stored, handled and transferred in and between computers. Currently the main use of hash trees is to make sure that data blocks received from other peers in a peer-to-peer network are received undamaged and unaltered, and even to check that the other peers do not lie and send fake blocks. Suggestions have been made to use hash trees in trusted computing systems. Hash trees are used in the IPFS and ZFS file systems, ~BitTorrent protocol, Apache Wave protocol, Git distributed revision control system, the Tahoe-LAFS backup system, the Bitcoin peer-to-peer network, the Certificate Transparency framework, and a number of ~NoSQL systems like Apache Cassandra and Riak.</pre>
+</div>
 <div created="20160302004551919" modified="20160302165902482" tags="Databases" title="Pipeline DB">
 <pre>!Overview
 
@@ -6586,6 +6622,39 @@ Rust is dual-licensed under Apache 2.0 and MIT terms.
 &lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
 
 &lt;/div&gt;</pre>
+</div>
+<div created="20160306050841664" modified="20160306052900965" tags="[[Programming Languages]]" title="WebAssembly">
+<pre>!Overview
+
+~WebAssembly or wasm is a new portable, size- and load-time-efficient format suitable for compilation to the web.
+
+~WebAssembly is currently being designed as an open standard by a W3C Community Group that includes representatives from all major browsers. Expect the contents of this website and its associated design repositories to be in flux: everything is still under discussion and subject to change.&lt;&lt;ref &quot;1&quot;&gt;&gt;
+
+!!! Design Goals
+
+* Efficient and fast: The wasm AST is designed to be encoded in a size- and load-time-efficient binary format. ~WebAssembly aims to execute at native speed by taking advantage of common hardware capabilities available on a wide range of platforms.
+
+* Safe: ~WebAssembly describes a memory-safe, sandboxed execution environment that may even be implemented inside existing ~JavaScript virtual machines. When embedded in the web, ~WebAssembly will enforce the same-origin and permissions security policies of the browser.
+
+* Open and debuggable: ~WebAssembly is designed to be pretty-printed in a textual format for debugging, testing, experimenting, optimizing, learning, teaching, and writing programs by hand. The textual format will be used when viewing the source of wasm modules on the web.
+
+* Part of the open web platform: ~WebAssembly is designed to maintain the versionless, feature-tested, and backwards-compatible nature of the web. ~WebAssembly modules will be able to call into and out of the ~JavaScript context and access browser functionality through the same Web APIs accessible from ~JavaScript. ~WebAssembly also supports non-web embeddings.
+
+!Milestones
+
+Minimum Viable Product to be released on ???
+
+!Availability
+
+~WebAssembly design document available under the Apache License.
+
+!Additional Information
+
+[[webassembly.github.io|http://webassembly.github.io]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;http://webassembly.github.io&quot;&gt;&gt;</pre>
 </div>
 <div created="20160302163508053" modified="20160302165600154" tags="TableOfContents" title="Welcome">
 <pre>Techno Fomo serves as external storage for my brain to remember innovative technology. It is a system of record to write down when I discover something interesting that I will want to recall N months from now.
