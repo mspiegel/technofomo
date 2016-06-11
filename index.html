@@ -145,6 +145,10 @@ Error message and password prompt
 
 <li>$:/state/toc/TableOfContents-Databases--81657105</li>
 
+<li>$:/state/toc/TableOfContents-Distributed Systems--81657105</li>
+
+<li>$:/state/toc/TableOfContents-Operations--81657105</li>
+
 <li>$:/state/toc/TableOfContents-Programming Languages--81657105</li>
 
 <li>$:/StoryList</li>
@@ -175,11 +179,19 @@ Error message and password prompt
 
 <li>Go</li>
 
+<li>gRPC</li>
+
 <li>Merkle Tree</li>
+
+<li>Operations</li>
 
 <li>Pipeline DB</li>
 
+<li>Pony</li>
+
 <li>Programming Languages</li>
+
+<li>Prometheus</li>
 
 <li>Rust</li>
 
@@ -6285,10 +6297,16 @@ Error message and password prompt
 <div created="20160323144951617" modified="20160323144952232" title="$:/state/toc/TableOfContents-Conferences--687205153">
 <pre>close</pre>
 </div>
-<div created="20160323144724584" modified="20160323144948488" title="$:/state/toc/TableOfContents-Conferences--81657105">
+<div created="20160323144724584" modified="20160611021826085" title="$:/state/toc/TableOfContents-Conferences--81657105">
 <pre>close</pre>
 </div>
 <div created="20160306053104673" modified="20160317171710822" title="$:/state/toc/TableOfContents-Databases--81657105">
+<pre>close</pre>
+</div>
+<div created="20160611021750373" modified="20160611024123939" title="$:/state/toc/TableOfContents-Distributed Systems--81657105">
+<pre>close</pre>
+</div>
+<div created="20160611024122085" modified="20160611024122624" title="$:/state/toc/TableOfContents-Operations--81657105">
 <pre>close</pre>
 </div>
 <div created="20160306050836073" modified="20160306053140222" title="$:/state/toc/TableOfContents-Programming Languages--81657105">
@@ -6541,7 +6559,7 @@ padding: 5px;
 
 tc-drop-down a {display:inline;padding:0}</pre>
 </div>
-<div created="20160302152407598" modified="20160302165040946" tags="[[Programming Languages]]" title="Go">
+<div created="20160302152407598" modified="20160611021739347" tags="[[Programming Languages]]" title="Go">
 <pre>!Overview
 
 Go is expressive, concise, clean, and efficient. Its concurrency mechanisms make it easy to write programs that get the most out of multicore and networked machines, while its novel type system enables flexible and modular program construction. Go compiles quickly to machine code yet has the convenience of garbage collection and the power of run-time reflection. It's a fast, statically typed, compiled language that feels like a dynamically typed, interpreted language&lt;&lt;ref &quot;1&quot;&gt;&gt;.
@@ -6550,7 +6568,7 @@ Go is mostly in the C family (basic syntax), with significant input from the Pas
 
 !Milestones
 
-Go 1.5 was released August 2015
+Go 1.6 was released February 2016
 
 !Availability
 
@@ -6565,6 +6583,32 @@ Go is distributed under a BSD-style license.
 &lt;&lt;footnotes &quot;1&quot; &quot;https://golang.org/doc&quot;&gt;&gt;
 &lt;&lt;footnotes &quot;2&quot; &quot;https://golang.org/doc/faq#ancestors&quot;&gt;&gt;</pre>
 </div>
+<div created="20160611022657364" modified="20160611023321253" tags="[[Distributed Systems]]" title="gRPC">
+<pre>!Overview
+
+Google has been using a single general-purpose RPC infrastructure called Stubby to connect the large number of microservices running within and across our data centers for over a decade. Our internal systems have long embraced the microservice architecture gaining popularity today. Having a uniform, cross-platform RPC infrastructure has allowed for the rollout of fleet-wide improvements in efficiency, security, reliability and behavioral analysis critical to supporting the incredible growth seen in that period.&lt;&lt;ref &quot;1&quot;&gt;&gt;
+
+In gRPC a client application can directly call methods on a server application on a different machine as if it was a local object, making it easier for you to create distributed applications and services. As in many RPC systems, gRPC is based around the idea of defining a service, specifying the methods that can be called remotely with their parameters and return types. On the server side, the server implements this interface and runs a gRPC server to handle client calls. On the client side, the client has a stub that provides exactly the same methods as the server.&lt;&lt;ref &quot;2&quot;&gt;&gt;
+
+!Milestones
+
+gRPC 0.14.1 released in May 2016
+
+!Availability
+
+gRPC is available under a BSD license.
+
+!Additional Information
+
+[[http://www.grpc.io]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;http://www.grpc.io/posts/principles&quot;&gt;&gt;
+&lt;&lt;footnotes &quot;2&quot; &quot;http://www.grpc.io/docs/#what-is-grpc&quot;&gt;&gt;
+
+</pre>
+</div>
 <div created="20160306053342588" modified="20160306053719583" tags="[[Data Structures]]" title="Merkle Tree">
 <pre>!Overview
 
@@ -6577,6 +6621,11 @@ The concept of hash trees is named after Ralph Merkle who patented it in 1979.
 !! Uses
 
 Hash trees can be used to verify any kind of data stored, handled and transferred in and between computers. Currently the main use of hash trees is to make sure that data blocks received from other peers in a peer-to-peer network are received undamaged and unaltered, and even to check that the other peers do not lie and send fake blocks. Suggestions have been made to use hash trees in trusted computing systems. Hash trees are used in the IPFS and ZFS file systems, ~BitTorrent protocol, Apache Wave protocol, Git distributed revision control system, the Tahoe-LAFS backup system, the Bitcoin peer-to-peer network, the Certificate Transparency framework, and a number of ~NoSQL systems like Apache Cassandra and Riak.</pre>
+</div>
+<div created="20160611023357971" modified="20160611023412441" tags="TableOfContents" title="Operations">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc-selective-expandable &quot;Operations&quot;&gt;&gt;
+&lt;/div&gt;</pre>
 </div>
 <div created="20160302004551919" modified="20160302165902482" tags="Databases" title="Pipeline DB">
 <pre>!Overview
@@ -6607,12 +6656,97 @@ Much of the data that is passed through ~PipelineDB can thus be thought of as vi
 
 </pre>
 </div>
+<div created="20160611020704708" modified="20160611021642985" tags="[[Programming Languages]]" title="Pony">
+<pre>!Overview
+
+Pony is an object-oriented, actor-model, capabilities-secure programming language. It's object-oriented because it has classes and objects, like Python, Java, C++, and many other languages. It's actor-model because it has actors (similar to Erlang or Akka). These behave like objects, but they can also execute code asynchronously.&lt;&lt;ref &quot;1&quot;&gt;&gt;.
+
+Pony's capabilities-secure type system is based on the object-capability model. A capability is an unforgeable token that (a) designates an object and (b) gives the program the authority to perform a specific set of actions on that object.&lt;&lt;ref &quot;2&quot;&gt;&gt;
+
+There are six reference capabilities in Pony: 
+
+* Isolated. This is for references to isolated data structures. If you have an iso variable then you know that there are no other variables that can access that data. 
+* Value. This is for references to immutable data structures.
+* Reference. This is for references to mutable data structures that are not isolated, in other words &quot;normal&quot; data.
+* Box. This is for references to data that is read-only to you. it allows you to write code that can work for both val and ref variables, as long as it doesn't write to the object.
+* Transition. This is used for data structures that you want to write to and give out read-only (box) variables to.
+* Tag. This is for references used only for identification.
+
+!Milestones
+
+Pony 0.2.1 was released October 2015
+
+!Availability
+
+Pony is distributed under a BSD-style license.
+
+!Additional Information
+
+[[http://www.ponylang.org]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;http://tutorial.ponylang.org&quot;&gt;&gt;
+&lt;&lt;footnotes &quot;2&quot; &quot;http://tutorial.ponylang.org/capabilities&quot;&gt;&gt;</pre>
+</div>
 <div created="20160302164914258" modified="20160302170102667" tags="TableOfContents" title="Programming Languages">
 <pre>A programming language is a formal constructed language designed to communicate instructions to a machine, particularly a computer. Programming languages can be used to create programs to control the behavior of a machine or to express algorithms.
 
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable &quot;Programming Languages&quot;&gt;&gt;
 &lt;/div&gt;</pre>
+</div>
+<div created="20160611023425267" modified="20160611024120602" tags="Operations" title="Prometheus">
+<pre>!Overview
+
+Prometheus is an open-source systems monitoring and alerting toolkit originally built at ~SoundCloud.&lt;&lt;ref &quot;1&quot;&gt;&gt;
+
+!!Features
+
+Prometheus's main features are:
+
+* a multi-dimensional data model (time series identified by metric name and key/value pairs)
+* a flexible query language to leverage this dimensionality
+* no reliance on distributed storage; single server nodes are autonomous
+* time series collection happens via a pull model over HTTP
+* pushing time series is supported via an intermediary gateway
+* targets are discovered via service discovery or static configuration
+* multiple modes of graphing and dashboarding support
+
+!!Components
+
+The Prometheus ecosystem consists of multiple components, many of which are optional:
+
+* the main Prometheus server which scrapes and stores time series data
+* client libraries for instrumenting application code
+* a push gateway for supporting short-lived jobs
+* a GUI-based dashboard builder based on Rails/SQL
+* special-purpose exporters (for HAProxy, ~StatsD, Ganglia, etc.)
+* an (experimental) alertmanager
+* a command-line querying tool
+* various support tools
+
+Prometheus works well for recording any purely numeric time series. It fits both machine-centric monitoring as well as monitoring of highly dynamic service-oriented architectures. In a world of microservices, its support for multi-dimensional data collection and querying is a particular strength.
+
+Prometheus is designed for reliability, to be the system you go to during an outage to allow you to quickly diagnose problems. Each Prometheus server is standalone, not depending on network storage or other remote services. You can rely on it when other parts of your infrastructure are broken, and you do not have to set up complex infrastructure to use it.
+
+!Milestones
+
+Prometheus 0.19.2 released in May 2016
+
+!Availability
+
+Prometheus is available under the Apache 2 license.
+
+!Additional Information
+
+[[https://prometheus.io]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;https://prometheus.io/docs/introduction/overview/&quot;&gt;&gt;
+
+</pre>
 </div>
 <div created="20160302145342572" modified="20160302165033130" tags="[[Programming Languages]]" title="Rust">
 <pre>!Overview
