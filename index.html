@@ -149,6 +149,8 @@ Error message and password prompt
 
 <li>$:/state/toc/TableOfContents-Operations--81657105</li>
 
+<li>$:/state/toc/TableOfContents-Programming Languages--687205153</li>
+
 <li>$:/state/toc/TableOfContents-Programming Languages--81657105</li>
 
 <li>$:/StoryList</li>
@@ -194,6 +196,8 @@ Error message and password prompt
 <li>Prometheus</li>
 
 <li>Rust</li>
+
+<li>Single Assignment C</li>
 
 <li>Strange Loop</li>
 
@@ -6309,6 +6313,9 @@ Error message and password prompt
 <div created="20160611024122085" modified="20160611024122624" title="$:/state/toc/TableOfContents-Operations--81657105">
 <pre>close</pre>
 </div>
+<div created="20160627235639617" modified="20160627235704209" title="$:/state/toc/TableOfContents-Programming Languages--687205153">
+<pre>close</pre>
+</div>
 <div created="20160306050836073" modified="20160306053140222" title="$:/state/toc/TableOfContents-Programming Languages--81657105">
 <pre>close</pre>
 </div>
@@ -6770,6 +6777,39 @@ Rust is dual-licensed under Apache 2.0 and MIT terms.
 
 &lt;&lt;footnotes &quot;1&quot; &quot;https://doc.rust-lang.org/book/&quot;&gt;&gt;
 </pre>
+</div>
+<div created="20160627235155628" modified="20160627235630014" tags="[[Programming Languages]]" title="Single Assignment C">
+<pre>!Overview
+
+SAC (Single Assignment C) is a strict purely functional programming language whose design is focused on the needs of numerical applications. Emphasis is laid on efficient support for array processing. Efficiency concerns are essentially twofold. On the one hand, efficiency in program development is to be improved by the opportunity to specify array operations on a high level of abstraction. On the other hand, efficiency in program execution, i.e. the runtime performance of programs, in time and memory consumption, is still to be achieved by sophisticated compilation schemes. Only as far as the latter succeeds, the high-level style of specifications can actually be called useful&lt;&lt;ref &quot;1&quot;&gt;&gt;.
+
+In more detail, the basic language design goals of SAC are to:
+
+* provide a purely functional language with a syntax very similar to that of C in order to ease, for a large community of programmers, the transition from an imperative to a functional programming style;
+* support multi-dimensional arrays as first class objects;
+* allow the specification of shape- and dimension-invariant array operations;
+* provide high-level array operations that liberate programming from tedious and error-prone specifications of starts, stops and strides for array traversals thereby improving code reusability and programming productivity, in general.
+* incorporate a module system that allows for separate compilation, separate name spaces, and abstract data types, and, additionally, provides an interface to foreign languages in order to enable reuse of existing code;
+* provide means for a smooth integration of states and state modifications into the functional paradigm based on uniqueness types;
+* use the module system, the foreign language interface, and the integration of states in order to create a standard library which provides a functionality similar to that of the standard C libraries, e.g. powerful I/O facilities or mathematical functions;
+* facilitate the compilation to host machine code which can be efficiently executed both in terms of time and space demand;
+* facilitate the compilation for non-sequential program execution in multiprocessor environments.
+
+!Milestones
+
+SAC 0.9.3 was released in April 2013
+
+!Availability
+
+Permission to use this software is hereby granted free of charge for any non-profit purpose in a non-commercial environment, i.e. for educational or research purposes in a non-profit institute or for personal, non-commercial use. Any use of this software with a commercial purpose or in a commercial environment is not granted by this license and requires explicit permission.
+
+!Additional Information
+
+[[http://www.sac-home.org]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;https://en.wikipedia.org/wiki/SAC_programming_language&quot;&gt;&gt;</pre>
 </div>
 <div created="20160323144601930" modified="20160323144721512" tags="Conferences" title="Strange Loop">
 <pre>Strange Loop is a multi-disciplinary conference that brings together the developers and thinkers building tomorrow's technology in fields such as emerging languages, alternative databases, concurrency, distributed systems, security, and the web.
