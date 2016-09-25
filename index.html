@@ -163,6 +163,8 @@ Error message and password prompt
 
 <li>Distributed Systems</li>
 
+<li>DistributedLog</li>
+
 <li>Draft of 'Modelica'</li>
 
 <li>Elm</li>
@@ -8137,6 +8139,29 @@ In-Memory Cluster Computing (Zaharia et al, 2011)&quot;&gt;&gt;
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable &quot;Distributed Systems&quot;&gt;&gt;
 &lt;/div&gt;</pre>
+</div>
+<div created="20160925150932580" modified="20160925151717789" tags="[[Distributed Systems]]" title="DistributedLog">
+<pre>!Overview
+
+~DistributedLog is a replicated log stream store. It is not a replicated pub/sub store&lt;&lt;ref &quot;1&quot;&gt;&gt;. ~DistributedLog exposes the log stream as the unit of operations. A log stream is a totally ordered, immutable sequence of log records. A log record is a sequence of bytes. Log records are batched into entries and written into log segments&lt;&lt;ref &quot;2&quot;&gt;&gt;.
+
+!Milestones
+
+~DistributedLog accepted to the Apache Incubator in June 2016
+
+!Availability
+
+~DistributedLog is available under the Apache License 2.0.
+
+!Additional Information
+
+[[distributedlog.io|http://distributedlog.io]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;http://distributedlog.incubator.apache.org/technical-review/2015/09/19/kafka-vs-distributedlog.html&quot;&gt;&gt;
+&lt;&lt;footnotes &quot;2&quot; &quot;http://distributedlog.incubator.apache.org/docs/latest/user_guide/architecture/main.html&quot;&gt;&gt;
+</pre>
 </div>
 <div modified="20160914174505028" title="Draft of 'Modelica'">
 <pre></pre>
