@@ -139,9 +139,23 @@ Error message and password prompt
 
 <li>$:/state/tab-1749438307</li>
 
+<li>$:/state/toc/TableOfContents-Conferences--687205153</li>
+
+<li>$:/state/toc/TableOfContents-Data Structures--687205153</li>
+
 <li>$:/state/toc/TableOfContents-Databases--687205153</li>
 
+<li>$:/state/toc/TableOfContents-Distributed Systems--687205153</li>
+
+<li>$:/state/toc/TableOfContents-Distributed Systems--81657105</li>
+
+<li>$:/state/toc/TableOfContents-Operating Systems--81657105</li>
+
+<li>$:/state/toc/TableOfContents-Operations--687205153</li>
+
 <li>$:/state/toc/TableOfContents-Programming Languages--687205153</li>
+
+<li>$:/state/toc/TableOfContents-Standards--687205153</li>
 
 <li>$:/StoryList</li>
 
@@ -177,11 +191,17 @@ Error message and password prompt
 
 <li>gRPC</li>
 
+<li>Hydra</li>
+
 <li>Merkle Tree</li>
 
 <li>MessagePack</li>
 
 <li>Modelica</li>
+
+<li>NixOS</li>
+
+<li>Operating Systems</li>
 
 <li>Operations</li>
 
@@ -7928,10 +7948,31 @@ Error message and password prompt
 <div created="20160719141908274" modified="20160719141908274" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Settings</pre>
 </div>
+<div created="20160930123837290" modified="20160930123838842" title="$:/state/toc/TableOfContents-Conferences--687205153">
+<pre>close</pre>
+</div>
+<div created="20160930123839370" modified="20160930123842315" title="$:/state/toc/TableOfContents-Data Structures--687205153">
+<pre>close</pre>
+</div>
 <div created="20160719183905345" modified="20160719183905991" title="$:/state/toc/TableOfContents-Databases--687205153">
 <pre>close</pre>
 </div>
-<div created="20160719183831667" modified="20160719183909197" title="$:/state/toc/TableOfContents-Programming Languages--687205153">
+<div created="20160930123832489" modified="20160930123835242" title="$:/state/toc/TableOfContents-Distributed Systems--687205153">
+<pre>close</pre>
+</div>
+<div created="20160930123352410" modified="20160930123801310" title="$:/state/toc/TableOfContents-Distributed Systems--81657105">
+<pre>close</pre>
+</div>
+<div created="20160930130740797" modified="20160930130743445" title="$:/state/toc/TableOfContents-Operating Systems--81657105">
+<pre>close</pre>
+</div>
+<div created="20160930123815048" modified="20160930123831473" title="$:/state/toc/TableOfContents-Operations--687205153">
+<pre>close</pre>
+</div>
+<div created="20160719183831667" modified="20160930123853844" title="$:/state/toc/TableOfContents-Programming Languages--687205153">
+<pre>close</pre>
+</div>
+<div created="20160930123813711" modified="20160930123828633" title="$:/state/toc/TableOfContents-Standards--687205153">
 <pre>close</pre>
 </div>
 <div list="Welcome" title="$:/StoryList">
@@ -8288,6 +8329,29 @@ gRPC is available under a BSD license.
 
 </pre>
 </div>
+<div created="20160930122759597" modified="20160930123337331" tags="[[Distributed Systems]]" title="Hydra">
+<pre>!Overview
+
+Hydra is a distributed data processing and storage system originally developed at ~AddThis. It ingests streams of data (think log files) and builds trees that are aggregates, summaries, or transformations of the data. These trees can be used by humans to explore (tiny queries), as part of a machine learning pipeline (big queries), or to support live consoles on websites (lots of queries)&lt;&lt;ref &quot;1&quot;&gt;&gt;. Hydra has similarities to Google Dremel / Apache Drill, Apache Samza, and Kafka streams.
+
+!Milestones
+
+Hydra was open-sourced in January 2014. Minor releases are issued on a weekly basis.
+
+!Availability
+
+Hydra is available under the Apache License 2.0.
+
+!Additional Information
+
+[[Hydra|https://github.com/addthis/hydra]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;https://github.com/addthis/hydra&quot;&gt;&gt;
+
+</pre>
+</div>
 <div created="20160306053342588" modified="20160306053719583" tags="[[Data Structures]]" title="Merkle Tree">
 <pre>!Overview
 
@@ -8336,6 +8400,38 @@ Modelica is a language for modeling of physical systems, designed to support eff
 ---
 
 &lt;&lt;footnotes &quot;1&quot; &quot;https://www.modelica.org/documents/ModelicaSpec33Revision1.pdf&quot;&gt;&gt;</pre>
+</div>
+<div created="20160930130032543" modified="20160930130722252" tags="[[Operating Systems]]" title="NixOS">
+<pre>!Overview
+
+~NixOS is a Linux distribution with a unique approach to package and configuration management. In ~NixOS, the entire operating system - the kernel, applications, system packages, configuration files, and so on - is built by the Nix package manager from a description in a functional build language. It means that building a new configuration cannot overwrite previous configurations&lt;&lt;ref &quot;1&quot;&gt;&gt;.
+
+~NixOS has a transactional approach to configuration management: configuration changes such as upgrades are atomic. This means that if the upgrade to a new configuration is interrupted - say, the power fails half-way through - the system will still be in a consistent state: it will either boot in the old or the new configuration. In most other systems, you’ll end up in an inconsistent state, and your machine may not even boot anymore.
+
+!Milestones
+
+~NixOS 16.03 was released in May 2016.
+
+!Availability
+
+~NixOS is available under a MIT/X11 license.
+
+!Additional Information
+
+[[https://nixos.org]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;https://nixos.org/nixos/about.html&quot;&gt;&gt;
+
+</pre>
+</div>
+<div created="20160930125825127" modified="20160930130008211" tags="TableOfContents" title="Operating Systems">
+<pre>An operating system (OS) is system software that manages computer hardware and software resources and provides common services for computer programs. The operating system acts as an intermediary between programs and the computer hardware.
+
+&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc-selective-expandable &quot;Operating Systems&quot;&gt;&gt;
+&lt;/div&gt;</pre>
 </div>
 <div created="20160611023357971" modified="20160611023412441" tags="TableOfContents" title="Operations">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
@@ -8411,7 +8507,7 @@ Pony is distributed under a BSD-style license.
 &lt;&lt;toc-selective-expandable &quot;Programming Languages&quot;&gt;&gt;
 &lt;/div&gt;</pre>
 </div>
-<div created="20160611023425267" modified="20160611024120602" tags="Operations" title="Prometheus">
+<div created="20160611023425267" modified="20160930130734797" tags="Operations" title="Prometheus">
 <pre>!Overview
 
 Prometheus is an open-source systems monitoring and alerting toolkit originally built at ~SoundCloud.&lt;&lt;ref &quot;1&quot;&gt;&gt;
