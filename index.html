@@ -189,6 +189,8 @@ Error message and password prompt
 
 <li>Go</li>
 
+<li>Goss</li>
+
 <li>gRPC</li>
 
 <li>Hydra</li>
@@ -8302,6 +8304,89 @@ Go is distributed under a BSD-style license.
 
 &lt;&lt;footnotes &quot;1&quot; &quot;https://golang.org/doc&quot;&gt;&gt;
 &lt;&lt;footnotes &quot;2&quot; &quot;https://golang.org/doc/faq#ancestors&quot;&gt;&gt;</pre>
+</div>
+<div created="20161012174148295" modified="20161012174804283" tags="Operations" title="Goss">
+<pre>!Overview
+
+Goss is a YAML based serverspec-like tool for validating a server’s configuration. It eases the process of writing tests by allowing the user to generate tests from the current system state. Once the test suite is written they can be executed, waited-on, or served as a health endpoint.&lt;&lt;ref &quot;1&quot;&gt;&gt;
+
+Differences from serverspec:
+
+* 10-30x faster depending on test suite (tests are run in parallel)
+* Can derive server state and generate a manifest from a running server
+* goss is meant to be simple, albeit less flexible
+* Uses JSON instead of DSL
+* Manifests are static - no variables, conditionals, etc. If you need this, you should dynamically generate the JSON manifest.
+* Being in Go, it's a self contained binary, no need for ruby
+* Supports a much smaller set of OSes/test types
+
+!!Features
+
+Supported resources
+
+* package - add new package
+* file - add new file
+* addr - add new remote address:port - ex: google.com:80
+* port - add new listening [protocol]:port - ex: 80 or udp:123
+* service - add new service
+* user - add new user
+* group - add new group
+* command - add new command
+* dns - add new dns
+* process - add new process name
+* kernel-param - add new kernel-param
+* mount - add new mount
+* interface - add new network interface
+* http - add new network http url
+* goss - add new goss file, it will be imported from this one
+
+Supported output formats
+
+* rspecish (default) - Similar to rspec output
+* documentation - Verbose test results
+* JSON - Detailed test result
+* TAP
+* JUnit
+* nagios - Nagios/Sensu compatible output /w exit code 2 for failures.
+* nagios_verbose - nagios output with verbose failure output.
+
+Limitations
+
+Currently goss only runs on Linux.
+
+The following tests have limitations.
+
+Package:
+
+* rpm
+* deb
+* Alpine apk
+* pacman
+
+Service:
+
+* systemd
+* sysV init
+* ~OpenRC init
+* Upstart
+
+!Milestones
+
+Goss 0.2.4 released in September 2016
+
+!Availability
+
+Goss is available under the Apache 2 license.
+
+!Additional Information
+
+[[https://goss.rocks]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;https://github.com/aelsabbahy/goss&quot;&gt;&gt;
+
+</pre>
 </div>
 <div created="20160611022657364" modified="20160611023321253" tags="[[Distributed Systems]]" title="gRPC">
 <pre>!Overview
