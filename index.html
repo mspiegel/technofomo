@@ -199,6 +199,8 @@ Error message and password prompt
 
 <li>Hydra</li>
 
+<li>Hyper DB</li>
+
 <li>Merkle Tree</li>
 
 <li>MessagePack</li>
@@ -7967,7 +7969,7 @@ Error message and password prompt
 <div created="20160930123839370" modified="20160930123842315" title="$:/state/toc/TableOfContents-Data Structures--687205153">
 <pre>close</pre>
 </div>
-<div created="20160719183905345" modified="20160719183905991" title="$:/state/toc/TableOfContents-Databases--687205153">
+<div created="20160719183905345" modified="20161227193249616" title="$:/state/toc/TableOfContents-Databases--687205153">
 <pre>close</pre>
 </div>
 <div created="20160930123832489" modified="20160930123835242" title="$:/state/toc/TableOfContents-Distributed Systems--687205153">
@@ -8456,6 +8458,28 @@ Hydra is available under the Apache License 2.0.
 ---
 
 &lt;&lt;footnotes &quot;1&quot; &quot;https://github.com/addthis/hydra&quot;&gt;&gt;
+
+</pre>
+</div>
+<div created="20161227192711504" modified="20161227193225495" tags="Databases" title="Hyper DB">
+<pre>!Overview
+
+~HyPer is a main-memory-based relational DBMS for mixed OLTP and OLAP workloads. It is a so-called all-in-one New-SQL database system that entirely deviates from classical disk-based DBMS architectures by introducing many innovative ideas including machine code generation for data-centric query processing and multi-version concurrency control, leading to exceptional performance. ~HyPer’s OLTP throughput is comparable or superior to dedicated transaction processing systems and its OLAP performance matches the best query processing engines — however, ~HyPer achieves this OLTP and OLAP performance simultaneously on the same database state. Current research focuses on extending ~HyPer’s functionality beyond OLTP and OLAP processing to exploratory workflows that are deeply integrated into the database kernel by utilizing ~HyPer’s pioneering compilation infrastructure.
+
+The ~HyPer prototype demonstrates that it is indeed possible to build a main-memory database system that achieves world-record transaction processing throughput and best-of-breed OLAP query response times in one system in parallel on the same database state. The two workloads of online transaction processing (OLTP) and online analytical processing (OLAP) present different challenges for database architectures. Currently, users with high rates of mission-critical transactions have split their data into two separate systems, one database for OLTP and one so-called data warehouse for OLAP. While allowing for decent transaction rates, this separation has many disadvantages including data freshness issues due to the delay caused by only periodically initiating the Extract Transform Load-data staging and excessive resource consumption due to maintaining two separate information systems. We present an efficient hybrid system, called ~HyPer, that can handle both OLTP and OLAP simultaneously by using an efficient multi-version concurrency control scheme. ~HyPer is a main-memory database system that guarantees the full ACID properties for OLTP transactions. ~HyPer achieves both at the same time: unprecedentedly high transaction rates as high as 100,000 per second and very fast OLAP query response times on a single system executing both workloads in parallel. The performance analysis is based on a combined TPC-C and TPC-H benchmark. ~HyPer's OLTP throughput is better than ~VoltDB's published TPC-C performance and ~HyPer's OLAP query response times are superior to ~MonetDB's query response times. It should be emphasized that ~HyPer can match (or beat) these two best- of-breed transaction (~VoltDB) and query (~MonetDB) processing engines at the same time by performing both workloads in parallel on the same database state. ~HyPer's performance is due to the following design:
+
+* ~HyPer relies on in-memory data management without the ballast of traditional database systems caused by DBMS-controlled page structures and buffer management. SQL table definitions are transformed into simple vector-based virtual memory representations – which constitutes a column oriented physical storage scheme.
+* OLAP query processing is separated from mission-critical OLTP transaction processing using multi-version concurrency control.
+* Transactions and queries are specified in SQL or a PL/SQL-like scripting language and are efficiently compiled into efficient LLVM assembly code.
+* ~HyPer's transaction processing is fully ACID-compliant. Queries are specified in standard SQL-92 plus many extensions from following standard SQL standards.
+
+!Availability
+
+The commercial license for ~HyPer, a spin-off of TUM, has been acquired by [[Tableau Software|http://www.tableau.com/about/blog/2016/3/welcome-hyper-team-tableau-community-51375]]
+
+!Additional Information
+
+[[hyper-db.de/|http://hyper-db.de/]]
 
 </pre>
 </div>
