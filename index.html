@@ -221,6 +221,8 @@ Error message and password prompt
 
 <li>Prometheus</li>
 
+<li>Replex</li>
+
 <li>rkt</li>
 
 <li>Rust</li>
@@ -7969,7 +7971,7 @@ Error message and password prompt
 <div created="20160930123839370" modified="20160930123842315" title="$:/state/toc/TableOfContents-Data Structures--687205153">
 <pre>close</pre>
 </div>
-<div created="20160719183905345" modified="20161227193249616" title="$:/state/toc/TableOfContents-Databases--687205153">
+<div created="20160719183905345" modified="20170106031942206" title="$:/state/toc/TableOfContents-Databases--687205153">
 <pre>close</pre>
 </div>
 <div created="20160930123832489" modified="20160930123835242" title="$:/state/toc/TableOfContents-Distributed Systems--687205153">
@@ -8687,6 +8689,21 @@ Prometheus is available under the Apache 2 license.
 ---
 
 &lt;&lt;footnotes &quot;1&quot; &quot;https://prometheus.io/docs/introduction/overview/&quot;&gt;&gt;
+
+</pre>
+</div>
+<div created="20170106031552585" modified="20170106031928941" tags="Databases" title="Replex">
+<pre>!Overview
+
+Replex is a datastore that enables efficient querying on multiple keys by rethinking data placement during replication. Traditionally a data store is first globally partitioned then each partition is replicated identically to multiple nodes. Instead Replex relies on a novel replication unit, termed replex, which partitions a full copy of the data based on its unique key. Replexes eliminate any additional overhead to maintaining indices, at the cost of increasing recovery complexity. To address this issue, we also introduce hybrid replexes, which enable a rich design space for trading off steady-state performance with faster recovery. We build, parameterize, and evaluate Replex on multiple dimensions and find that Replex surpasses the steady-state and failure recovery performance of ~HyperDex, a state-of-the-art multi-key data store.
+
+!Availability
+
+Replex is implemented on top of ~HyperDex. I was unable to find any source code for Replex. ~HyperDex is available at http://hyperdex.org.
+
+!Additional Information
+
+[[USENIX 2016 paper|https://www.usenix.org/conference/atc16/technical-sessions/presentation/tai]]
 
 </pre>
 </div>
