@@ -138,7 +138,17 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/toc/TableOfContents-Conferences--687205153</li>
+
+<li>$:/state/toc/TableOfContents-Data Structures--687205153</li>
+
+<li>$:/state/toc/TableOfContents-Databases--687205153</li>
+
+<li>$:/state/toc/TableOfContents-Distributed Systems--687205153</li>
+
 <li>$:/state/toc/TableOfContents-Programming Languages--687205153</li>
+
+<li>$:/state/toc/TableOfContents-Standards--687205153</li>
 
 <li>$:/StoryList</li>
 
@@ -181,6 +191,8 @@ Error message and password prompt
 <li>Hydra</li>
 
 <li>Hyper DB</li>
+
+<li>JSONiq</li>
 
 <li>Merkle Tree</li>
 
@@ -8506,7 +8518,22 @@ Error message and password prompt
 <div created="20160302003735931" modified="20160302004434365" title="$:/SiteTitle">
 <pre>Techno Fomo</pre>
 </div>
-<div created="20170430205311366" modified="20170430205615801" title="$:/state/toc/TableOfContents-Programming Languages--687205153">
+<div created="20170603011141005" modified="20170603011142776" title="$:/state/toc/TableOfContents-Conferences--687205153">
+<pre>close</pre>
+</div>
+<div created="20170603011139497" modified="20170603011154160" title="$:/state/toc/TableOfContents-Data Structures--687205153">
+<pre>close</pre>
+</div>
+<div created="20170603011125050" modified="20170603011633964" title="$:/state/toc/TableOfContents-Databases--687205153">
+<pre>close</pre>
+</div>
+<div created="20170603011133810" modified="20170603011137949" title="$:/state/toc/TableOfContents-Distributed Systems--687205153">
+<pre>close</pre>
+</div>
+<div created="20170430205311366" modified="20170603011132070" title="$:/state/toc/TableOfContents-Programming Languages--687205153">
+<pre>close</pre>
+</div>
+<div created="20170603011148513" modified="20170603011149261" title="$:/state/toc/TableOfContents-Standards--687205153">
 <pre>close</pre>
 </div>
 <div list="Welcome" title="$:/StoryList">
@@ -8525,19 +8552,19 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/spiegel/Downloads/technofomo/index.html&quot;
+            &quot;text&quot;: &quot;https://mspiegel.github.io/technofomo/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;mspiegel.github.io&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;mspiegel.github.io&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;file:&quot;
+            &quot;text&quot;: &quot;https:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -8545,7 +8572,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/spiegel/Downloads/technofomo/index.html&quot;
+            &quot;text&quot;: &quot;/technofomo/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -8553,7 +8580,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;file://&quot;
+            &quot;text&quot;: &quot;https://mspiegel.github.io&quot;
         }
     }
 }</pre>
@@ -9031,6 +9058,28 @@ The commercial license for ~HyPer, a spin-off of TUM, has been acquired by [[Tab
 !Additional Information
 
 [[hyper-db.de/|http://hyper-db.de/]]
+
+</pre>
+</div>
+<div created="20170603011219631" modified="20170603011609970" tags="Databases" title="JSONiq">
+<pre>!Overview
+
+JSONiq is a query and processing language specifically designed for the popular JSON data model. The main ideas behind JSONiq are based on lessons learned in more than 30 years of relational query systems and more than 15 years of experience with designing and implementing query languages for semi-structured data like XML and RDF.
+
+Technically, the main characteristics of JSONiq are the following:
+
+* It is a set-oriented language. While most programming languages are designed to manipulate one object at a time, JSONiq is designed to process sets (actually, sequences) of data objects.
+* It is a functional language. A JSONiq program is an expression; the result of the program is the result of the evaluation of the expression. Expressions have fundamental role in the language: every language construct is an expression, and expressions are fully composable.
+* It is a declarative language. A program specifies what is the result being calculated, and does not specify low level algorithms like the sort algorithm, the fact that an algorithm is executed in main memory or is external, on a single machine or parallelized on several machines, or what access patterns (aka indexes) are being used during the evaluation of the program. Such implementation decisions should be taken automatically, by an optimizer, based on the physical characteristics of the data, and of the hardware environment. Just like a traditional database would do. The language has been designed from day one with optimizability in mind.
+* It is designed for nested, heterogeneous, semi-structured data. Data structures in JSON can be nested with arbitrary depth, do not have a specific type pattern (i.e. are heterogeneous), and may or may not have one or more schemas that describe the data. Even in the case of a schema, such a schema can be open, and/or simply partially describe the data. Unlike SQL, which is designed to query tabular, flat, homogeneous structures. JSONiq has been designed from scratch as a query for nested and heterogeneous data.
+
+!Availability
+
+The are several implementations of the JSONiq specification. One of them is [[Zorba|http://www.zorba.io/home]]
+
+!Additional Information
+
+[[JSONiq|http://www.jsoniq.org/]]
 
 </pre>
 </div>
