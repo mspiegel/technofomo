@@ -162,9 +162,13 @@ Error message and password prompt
 
 <li>Alluxio</li>
 
+<li>Apache Calcite</li>
+
 <li>Apache Spark</li>
 
 <li>Conferences</li>
+
+<li>Counting Quotient Filter</li>
 
 <li>Data Structures</li>
 
@@ -8521,10 +8525,10 @@ Error message and password prompt
 <div created="20170603011141005" modified="20170603011142776" title="$:/state/toc/TableOfContents-Conferences--687205153">
 <pre>close</pre>
 </div>
-<div created="20170603011139497" modified="20170603011154160" title="$:/state/toc/TableOfContents-Data Structures--687205153">
+<div created="20170603011139497" modified="20170903165925315" title="$:/state/toc/TableOfContents-Data Structures--687205153">
 <pre>close</pre>
 </div>
-<div created="20170603011125050" modified="20170603011633964" title="$:/state/toc/TableOfContents-Databases--687205153">
+<div created="20170603011125050" modified="20170903171218650" title="$:/state/toc/TableOfContents-Databases--687205153">
 <pre>close</pre>
 </div>
 <div created="20170603011133810" modified="20170603011137949" title="$:/state/toc/TableOfContents-Distributed Systems--687205153">
@@ -8732,6 +8736,34 @@ Alluxio is available under the Apache License 2.0.
 
 </pre>
 </div>
+<div created="20170903164934191" modified="20170903165912912" tags="Databases" title="Apache Calcite">
+<pre>!Overview
+
+Apache Calcite is an open source framework for building databases and data management systems. It includes a SQL parser, an API for building expressions in relational algebra, and a query planning engine. As a framework, Calcite does not store its own data or metadata, but instead allows external data and metadata to be accessed by means of plug-ins.
+
+Apache Calcite is a dynamic data management framework. It contains many of the pieces that comprise a typical database management system, but omits some key functions: storage of data, algorithms to process data, and a repository for storing metadata. Calcite intentionally stays out of the business of storing and processing data
+
+The following features are complete.
+
+* Query parser, validator and optimizer
+* Support for reading models in JSON format
+* Many standard functions and aggregate functions
+* JDBC queries against Linq4j and JDBC back-ends
+* Linq4j front-end
+* SQL features: SELECT, FROM (including JOIN syntax), WHERE, GROUP BY (including GROUPING SETS), aggregate functions (including COUNT(DISTINCT …) and FILTER), HAVING, ORDER BY (including NULLS FIRST/LAST), set operations (UNION, INTERSECT, MINUS), sub-queries (including correlated sub-queries), windowed aggregates, LIMIT (syntax as Postgres); more details in the SQL reference
+* Local and remote JDBC drivers; see Avatica
+* Several adapters
+
+!Availability
+
+Calcite is available under the Apache License 2.0.
+
+!Additional Information
+
+[[calcite.apache.org|https://calcite.apache.org/]]
+
+</pre>
+</div>
 <div created="20160302012606827" modified="20160302165049882" tags="[[Distributed Systems]]" title="Apache Spark">
 <pre>!Overview
 
@@ -8763,6 +8795,24 @@ In-Memory Cluster Computing (Zaharia et al, 2011)&quot;&gt;&gt;
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable &quot;Conferences&quot;&gt;&gt;
 &lt;/div&gt;</pre>
+</div>
+<div created="20170903171629307" modified="20170903172222449" tags="[[Data Structures]]" title="Counting Quotient Filter">
+<pre>!Overview
+
+Approximate Membership Query (AMQ) data structures allow you to track whether or not a given item is in a set. They never return false negatives (tell you that something is not in the set when in fact it is), but may return a tunable number of false positives. That is, in response to a query “is this item in the set” they return either ‘no,’ or ‘probably.’ There are variations beyond the basic membership test that also track counts of items, support deletions, allow runtime resizing of the structure, and so on.
+
+Four important shortcomings in Bloom filters (and most production AMQs) are:
+
+# The inability to delete items
+# Poor scaling out of RAM
+# The inability to resize dynamically
+# The inability to count the number of occurrences of each item, especially with skewed input distributions.
+
+The Counting Quotient Filter performs in-memory inserts and queries up to an order of magnitude faster than the original quotient filter structure from which it takes its inspiration, several times faster than a Bloom filter, and similarly to a cuckoo filter. The CQF structure is comparable or more space efficient than all of them too. Moreover, CQF does all of this while supporting counting, outperforming all of the other forms in both dimensions even though they do not.
+
+!Additional Information
+
+[[The Morning Paper|https://blog.acolyer.org/2017/08/08/a-general-purpose-counting-filter-making-every-bit-count/]]</pre>
 </div>
 <div created="20160306052918351" modified="20160306053138006" tags="TableOfContents" title="Data Structures">
 <pre>In computer science, a data structure is a particular way of organizing data in a computer so that it can be used efficiently. Different kinds of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks. Data structures provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. Usually, efficient data structures are key to designing efficient algorithms.
