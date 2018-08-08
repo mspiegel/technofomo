@@ -198,6 +198,8 @@ Error message and password prompt
 
 <li>JSONiq</li>
 
+<li>Mentat</li>
+
 <li>Merkle Tree</li>
 
 <li>MessagePack</li>
@@ -8528,7 +8530,7 @@ Error message and password prompt
 <div created="20170603011139497" modified="20170903165925315" title="$:/state/toc/TableOfContents-Data Structures--687205153">
 <pre>close</pre>
 </div>
-<div created="20170603011125050" modified="20170903171218650" title="$:/state/toc/TableOfContents-Databases--687205153">
+<div created="20170603011125050" modified="20180808183838882" title="$:/state/toc/TableOfContents-Databases--687205153">
 <pre>close</pre>
 </div>
 <div created="20170603011133810" modified="20170603011137949" title="$:/state/toc/TableOfContents-Distributed Systems--687205153">
@@ -9130,6 +9132,31 @@ The are several implementations of the JSONiq specification. One of them is [[Zo
 !Additional Information
 
 [[JSONiq|http://www.jsoniq.org/]]
+
+</pre>
+</div>
+<div created="20180808183517921" modified="20180808183827282" tags="Databases" title="Mentat">
+<pre>!Overview
+
+Project Mentat is a persistent, embedded knowledge base. It draws heavily on ~DataScript and Datomic. Mentat is intended to be a flexible relational (not key-value, not document-oriented) store that makes it easy to describe, grow, and reuse your domain schema.
+
+The first version of Project Mentat, named Datomish, was written in ~ClojureScript, targeting both Node (on top of promise_sqlite) and Firefox (on top of Sqlite.jsm). It also worked in pure Clojure on the JVM on top of jdbc-sqlite. The name was changed to avoid confusion with Datomic.
+
+The Rust implementation gives us a smaller compiled output, better performance, more type safety, better tooling, and easier deployment into Firefox and mobile platforms.
+
+!Motivation
+
+Mentat is intended to be a flexible relational (not key-value, not document-oriented) store that makes it easy to describe, grow, and reuse your domain schema.
+
+By abstracting away the storage schema, and by exposing change listeners outside the database (not via triggers), we hope to make domain schemas stable, and allow both the data store itself and embedding applications to use better architectures, meeting performance goals in a way that allows future evolution.
+
+!Availability
+
+Project Mentat is currently licensed under the Apache License v2.0.
+
+!Additional Information
+
+[[Project Mentat|https://github.com/mozilla/mentat]]
 
 </pre>
 </div>
