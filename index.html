@@ -151,6 +151,10 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/toc/TableOfContents-Distributed Systems--687205153</li>
+
+<li>$:/state/toc/TableOfContents-Filesystems--687205153</li>
+
 <li>$:/state/toc/TableOfContents-Operating Systems--687205153</li>
 
 <li>$:/StoryList</li>
@@ -231,6 +235,8 @@ Error message and password prompt
 
 <li>Prometheus</li>
 
+<li>QubesOS</li>
+
 <li>Redox</li>
 
 <li>Replex</li>
@@ -240,6 +246,8 @@ Error message and password prompt
 <li>Rust</li>
 
 <li>Salon des Refusés</li>
+
+<li>seL4</li>
 
 <li>Single Assignment C</li>
 
@@ -8879,7 +8887,13 @@ Error message and password prompt
 <div created="20160302003735931" modified="20160302004434365" title="$:/SiteTitle">
 <pre>Techno Fomo</pre>
 </div>
-<div created="20181127181259225" modified="20181212205117918" title="$:/state/toc/TableOfContents-Operating Systems--687205153">
+<div created="20181218153640403" modified="20181218153641497" title="$:/state/toc/TableOfContents-Distributed Systems--687205153">
+<pre>close</pre>
+</div>
+<div created="20181218153642666" modified="20181218153643626" title="$:/state/toc/TableOfContents-Filesystems--687205153">
+<pre>close</pre>
+</div>
+<div created="20181127181259225" modified="20181218154737160" title="$:/state/toc/TableOfContents-Operating Systems--687205153">
 <pre>close</pre>
 </div>
 <div list="Welcome" title="$:/StoryList">
@@ -9779,6 +9793,34 @@ Prometheus is available under the Apache 2 license.
 
 </pre>
 </div>
+<div created="20181218154005813" modified="20181218154725102" tags="[[Operating Systems]]" title="QubesOS">
+<pre>!Overview
+
+Qubes OS is a security-focused desktop operating system that aims to provide security through isolation. Virtualization is performed by Xen, and user environments can be based on Fedora, Debian, Whonix, and Microsoft Windows, among other operating systems. In Qubes, the isolation is provided in two dimensions: hardware controllers can be isolated into functional domains (e.g. network domains, USB controller domains), whereas the user's digital life is decided in domains with different levels of trust. For instance: work domain (most trusted), shopping domain, random domain (less trusted). Each of those domains is run in a separate virtual machine&lt;&lt;ref &quot;1&quot;&gt;&gt;.
+
+Qubes takes an approach called security by compartmentalization, which allows you to compartmentalize the various parts of your digital life into securely isolated compartments called qubes. Moreover, all of these isolated qubes are integrated into a single, usable system. Programs are isolated in their own separate qubes, but all windows are displayed in a single, unified desktop environment with unforgeable colored window borders so that you can easily identify windows from different security levels. Common attack vectors like network cards and USB controllers are isolated in their own hardware qubes while their functionality is preserved through secure networking, firewalls, and USB device management. Integrated file and clipboard copy and paste operations make it easy to work across various qubes without compromising security&lt;&lt;ref &quot;2&quot;&gt;&gt;.
+
+!Milestones
+
+Qubes OS 3.2.1 was released on November 12, 2018.
+
+!Availability
+
+Qubes is a compilation of software packages, each under its own license. The compilation is made available under the GNU General Public License version 2. Invisible Things Lab (ITL), who has funded and run the Qubes project since the beginning, and who has contributed the majority of Qubes-specific code (specifically: core-*, gui-*, and qubes-* repositories) would like to have a right to redistribute parts of this code under proprietary licenses. This is especially important for Qubes R3 and later, where the new architecture allows the creation of many editions of Qubes, using different hypervisors, some of which might not be open source. 
+
+!Additional Information
+
+&quot;&quot;&quot;
+[[https://www.qubes-os.org]]
+&quot;&quot;&quot;
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;https://en.wikipedia.org/wiki/Qubes_OS&quot;&gt;&gt;
+&lt;&lt;footnotes &quot;2&quot; &quot;https://www.qubes-os.org/intro/&quot;&gt;&gt;
+
+</pre>
+</div>
 <div created="20181212204025965" modified="20181212205102480" tags="[[Operating Systems]]" title="Redox">
 <pre>!Overview
 
@@ -9899,6 +9941,34 @@ The scope of the workshop is determined more by the format of submissions than b
 * Paradigms – all scientific work is rooted in a scientific paradigm that frame what questions can be asked. We encourage submissions that reflect on existing paradigms or explore alternative scientific paradigms.
 * Metaphors, myths and analogies – any description of formal, mathematical, quantitative or even poetical nature still represents just an analogy. We believe that fruitful ideas can be learned from less common forms of analogies as well as from the predominant, formal and mathematical ones.
 * From jokes to science fiction – a story or an artistic performance may explore ideas and spark conversations that provide crucial inspiration for development of new computer science thinking.</pre>
+</div>
+<div created="20181218152235477" modified="20181218153434803" tags="[[Operating Systems]]" title="seL4">
+<pre>!Overview
+
+L4 is a family of second-generation microkernels, generally used to implement Unix-like operating systems, but also used in a variety of other systems. seL4 is a third generation microkernel that builds on 15 years of experience with the L4 microkernel, such as small size, high performance, and policy freedom, and extends it with a mechanism to enforce security guarantees at the operating system and application levels. seL4 is unique it is the only operating system that has undergone formal verification, proving bug-free implementation, and enforcement of spatial isolation (data confidentiality and integrity). It is also the first protected mode operating system with a sound timeliness analysis&lt;&lt;ref &quot;1&quot;&gt;&gt;.
+
+seL4 takes a novel approach to kernel resource management, exporting the management of kernel resources to user level and subjects them to the same capability-based access control as user resources. This model, simplifies reasoning about isolation properties, and was an enabler for later proofs that seL4 enforces the core security properties of integrity and confidentiality. The NICTA team also proved correctness of the translation from C to executable machine code, taking the compiler out of the trusted computing base of seL4. This implies that the high-level security proofs hold for the kernel executable. seL4 is also the first published protected-mode OS kernel with a complete and sound worst-case execution-time (WCET) analysis, a prerequisite for its use in hard real-time systems&lt;&lt;ref &quot;2&quot;&gt;&gt;.
+
+!Milestones
+
+seL4 10.1.1 was released on Nov 12, 2018.
+
+!Availability
+
+The seL4 kernel itself and most of its proof is licensed under GPL Version 2. Various further components, libraries, and tools are released under the 2-clause BSD license. Additionally, the release contains 3rd-party open-source software, available under standard open-source licenses such as GPLv2, 3-clause BSD, and MIT/Expat.
+
+!Additional Information
+
+&quot;&quot;&quot;
+[[https://sel4.systems]]
+&quot;&quot;&quot;
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;https://sel4.systems/Info/Docs/seL4-brochure.pdf&quot;&gt;&gt;
+&lt;&lt;footnotes &quot;2&quot; &quot;https://en.wikipedia.org/wiki/L4_microkernel_family&quot;&gt;&gt;
+
+</pre>
 </div>
 <div created="20160627235155628" modified="20160627235630014" tags="[[Programming Languages]]" title="Single Assignment C">
 <pre>!Overview
