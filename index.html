@@ -151,6 +151,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/toc/TableOfContents-Databases--687205153</li>
+
 <li>$:/state/toc/TableOfContents-Distributed Systems--687205153</li>
 
 <li>$:/state/toc/TableOfContents-Filesystems--687205153</li>
@@ -256,6 +258,8 @@ Error message and password prompt
 <li>Strange Loop</li>
 
 <li>TableOfContents</li>
+
+<li>Timescale DB</li>
 
 <li>USENIX Annual Technical Conference</li>
 
@@ -8887,6 +8891,9 @@ Error message and password prompt
 <div created="20160302003735931" modified="20160302004434365" title="$:/SiteTitle">
 <pre>Techno Fomo</pre>
 </div>
+<div created="20181219123525530" modified="20181219131125909" title="$:/state/toc/TableOfContents-Databases--687205153">
+<pre>close</pre>
+</div>
 <div created="20181218153640403" modified="20181218153641497" title="$:/state/toc/TableOfContents-Distributed Systems--687205153">
 <pre>close</pre>
 </div>
@@ -10030,6 +10037,38 @@ Some of the guiding principles:
 &lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
 
 &lt;/div&gt;</pre>
+</div>
+<div created="20181219122936673" modified="20181219123506865" tags="Databases" title="Timescale DB">
+<pre>!Overview
+
+~TimescaleDB is an open-source time-series database optimized for fast ingest and complex queries. It speaks &quot;full SQL&quot; and is correspondingly easy to use like a traditional relational database, yet scales in ways previously reserved for ~NoSQL databases.
+
+Time-series data is largely immutable. Writes primarily occur as new appends to recent time intervals, not as updates to existing rows. Both read and write workloads have a natural partitioning across both time and space.&lt;&lt;ref 1&gt;&gt;
+
+~TimescaleDB provides the interface of a single continuous database table across all your time-series data, even though this table is sharded into many individual chunks, with each chunk sized to ensure good performance. One simply treats the hypertable abstraction as a standard ~PostgreSQL table: for queries, inserts, upserts, triggers, schema changes, and management. In other words, when inserting data, one writes to the hypertable; ~TimescaleDB will ensure each new row is transparently dispatched to the proper chunk. Similarly, when querying data, one queries the hypertable; ~TimescaleDB ensures that the query touches just a minimal set of chunks. A database can have multiple hypertables, each with its own schema and partitionings. 
+
+~TimescaleDB scales performance and storage by transparently partitioning hypertables across multiple dimensions: by a time interval, and optionally by one or more additional columns in your data (e.g., device identifiers for sensor data, symbols in tick data, locations, customers, or users), using both interval and hash partitioning. Each such partition is called a chunk, which is automatically created by the system without administrative interaction. The system scales to many such chunks – easily handling 10,000s of chunks on a single node at scale – and such chunks can be transparently spread across many disks to scale up capacity. 
+
+~TimescaleDB integrates directly into the ~PostgreSQL query planner and execution engine, and performs a number of low-level distributed query optimizations to improve performance. These include aggressive constraint exclusion in both time and spatial dimensions to minimize the number of chunks accessed when answering queries, as well as constifying mutable functions at execution time to further scope queries to individual chunks. ~TimescaleDB also introduces special optimizations for time-based GROUP BY, ORDER BY, and LIMIT clauses, as well as new time-oriented functions to simplify analytical queries.
+
+
+!Milestones
+
+~TimescaleDB 1.1.0 was released on December 13, 2018.
+
+!Availability
+
+~TimescaleDB is available under the Apache Public License 2.0. Commercial licenses are available.
+
+!Additional Information
+
+[[https://www.timescale.com/]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;https://www.timescale.com/how-it-works&quot;&gt;&gt;
+
+</pre>
 </div>
 <div created="20160323144728961" modified="20160323144944896" tags="Conferences" title="USENIX Annual Technical Conference">
 <pre>The USENIX Annual Technical Conference (ATC) brings together leading systems researchers for cutting-edge systems research and unlimited opportunities to gain insight into a variety of must-know topics, including virtualization, system and network management and troubleshooting, cloud computing, security, privacy, and trust, mobile and wireless, and more.
