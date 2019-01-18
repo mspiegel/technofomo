@@ -213,6 +213,8 @@ Error message and password prompt
 
 <li>JSONiq</li>
 
+<li>LightVM</li>
+
 <li>Mentat</li>
 
 <li>Merkle Tree</li>
@@ -8900,7 +8902,7 @@ Error message and password prompt
 <div created="20181218153642666" modified="20181218153643626" title="$:/state/toc/TableOfContents-Filesystems--687205153">
 <pre>close</pre>
 </div>
-<div created="20181127181259225" modified="20181218154737160" title="$:/state/toc/TableOfContents-Operating Systems--687205153">
+<div created="20181127181259225" modified="20190118181906035" title="$:/state/toc/TableOfContents-Operating Systems--687205153">
 <pre>close</pre>
 </div>
 <div list="Welcome" title="$:/StoryList">
@@ -9549,6 +9551,30 @@ The are several implementations of the JSONiq specification. One of them is [[Zo
 
 [[JSONiq|http://www.jsoniq.org/]]
 
+</pre>
+</div>
+<div created="20190118181843462" modified="20190118181859320" tags="[[Operating Systems]]" title="LightVM">
+<pre>!Overview
+
+~LightVM is a virtualization solution based on Xen that is optimized to offer fast boot-times regardless of the number of active VMs. This is achieved by replacing Xenstore with a new distributed solution called ~NoXS (no Xenstore) which provides a shared page for each device containing all the information needed for device initialization.
+
+~LightVM uses the new Chaos toolstack which currently implements operations such as instantiation, saving, restoring and migration. Chaos can also be used in Xen environments based on Xenstore, making it a streamlined alternative for the xl toolstack. VMs management is assisted by the ~XenDevD daemon for proper device initialization.
+
+Currently, ~LightVM relies on Linux kernel for dom0, while for unprivileged domains one can use both Linux and Mini-OS based guests.
+
+~LightVM can boot a VM in 2.3ms which comparable to fork/exec on Linux (1ms), and two orders of magnitude faster than Docker. On a somewhat slower server with 64 cores, ~LightVM can pack thousands of VMs with memory and CPU usage comparable to that of processes.
+
+!Milestones
+
+~LightVM fork of Xen 4.8.1 was released on April 10, 2017.
+
+!Availability
+
+Some ~LightVM components are available under a GPL license. Some components are available under a BSD license.
+
+!Additional Information
+
+[[http://sysml.neclab.eu/projects/lightvm/]]
 </pre>
 </div>
 <div created="20180808183517921" modified="20180808183827282" tags="Databases" title="Mentat">
