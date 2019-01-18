@@ -151,12 +151,6 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
-<li>$:/state/tab/sidebar--1835078512</li>
-
-<li>$:/state/toc/TableOfContents-Conferences--81657105</li>
-
-<li>$:/state/toc/TableOfContents-Data Structures--81657105</li>
-
 <li>$:/state/toc/TableOfContents-Databases--687205153</li>
 
 <li>$:/state/toc/TableOfContents-Distributed Systems--687205153</li>
@@ -164,8 +158,6 @@ Error message and password prompt
 <li>$:/state/toc/TableOfContents-Filesystems--687205153</li>
 
 <li>$:/state/toc/TableOfContents-Operating Systems--687205153</li>
-
-<li>$:/state/toc/TableOfContents-Operating Systems--81657105</li>
 
 <li>$:/StoryList</li>
 
@@ -197,9 +189,15 @@ Error message and password prompt
 
 <li>DistributedLog</li>
 
+<li>Draft of 'Firecracker'</li>
+
+<li>Draft of 'Modelica'</li>
+
 <li>Elm</li>
 
 <li>Filesystems</li>
+
+<li>Firecracker</li>
 
 <li>Footnotes Macro</li>
 
@@ -8897,15 +8895,6 @@ Error message and password prompt
 <div created="20160302003735931" modified="20160302004434365" title="$:/SiteTitle">
 <pre>Techno Fomo</pre>
 </div>
-<div created="20190118181421923" modified="20190118181500698" title="$:/state/tab/sidebar--1835078512">
-<pre>TableOfContents</pre>
-</div>
-<div created="20190118181502415" modified="20190118181503213" title="$:/state/toc/TableOfContents-Conferences--81657105">
-<pre>close</pre>
-</div>
-<div created="20190118181504504" modified="20190118181505056" title="$:/state/toc/TableOfContents-Data Structures--81657105">
-<pre>close</pre>
-</div>
 <div created="20181219123525530" modified="20181219131125909" title="$:/state/toc/TableOfContents-Databases--687205153">
 <pre>close</pre>
 </div>
@@ -8915,10 +8904,7 @@ Error message and password prompt
 <div created="20181218153642666" modified="20181218153643626" title="$:/state/toc/TableOfContents-Filesystems--687205153">
 <pre>close</pre>
 </div>
-<div created="20181127181259225" modified="20190118181353561" title="$:/state/toc/TableOfContents-Operating Systems--687205153">
-<pre>close</pre>
-</div>
-<div created="20190118181509496" modified="20190118181510136" title="$:/state/toc/TableOfContents-Operating Systems--81657105">
+<div created="20181127181259225" modified="20190118174835823" title="$:/state/toc/TableOfContents-Operating Systems--687205153">
 <pre>close</pre>
 </div>
 <div list="Welcome" title="$:/StoryList">
@@ -9266,6 +9252,30 @@ The Counting Quotient Filter performs in-memory inserts and queries up to an ord
 &lt;&lt;footnotes &quot;2&quot; &quot;http://distributedlog.incubator.apache.org/docs/latest/user_guide/architecture/main.html&quot;&gt;&gt;
 </pre>
 </div>
+<div created="20181127181305435" draft.of="Firecracker" draft.title="Firecracker" modified="20190118173506620" tags="[[Operating Systems]]" title="Draft of 'Firecracker'">
+<pre>!Overview
+
+Firecracker is an open source virtualization technology that is purpose-built for creating and managing secure, multi-tenant containers and functions-based services. Firecracker implements a virtual machine monitor (VMM) that uses the Linux Kernel-based Virtual Machine (KVM) to create and manage microVMs. Firecracker has a minimalist design. It excludes unnecessary devices and guest functionality to reduce the memory footprint and attack surface area of each microVM. Firecracker is written in Rust.
+
+Firecracker runs in user space and uses the Linux Kernel-based Virtual Machine (KVM) to create microVMs. The fast startup time and low memory overhead of each microVM enables you to pack thousands of microVMs onto the same machine. This means that every function or container group can be encapsulated with a virtual machine barrier, enabling workloads from different customers to run on the same machine, without any tradeoffs to security or efficiency. Firecracker is an alternative to QEMU, an established VMM with a general purpose and broad feature set that allows it to host a variety of guest operating systems.
+
+!Milestones
+
+Firecracker v. 0.11.0 was released on November 23, 2018.
+
+!Availability
+
+Firecracker is available under the Apache License 2.0.
+
+!Additional Information
+
+[[https://firecracker-microvm.github.io/]]
+
+</pre>
+</div>
+<div modified="20160914174505028" title="Draft of 'Modelica'">
+<pre></pre>
+</div>
 <div created="20160719183004576" modified="20170430205606072" tags="[[Programming Languages]]" title="Elm">
 <pre>!Overview
 
@@ -9302,6 +9312,27 @@ Elm is distributed under a BSD-style license.
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable &quot;Filesystems&quot;&gt;&gt;
 &lt;/div&gt;</pre>
+</div>
+<div created="20181127181305435" modified="20181127181753646" tags="[[Operating Systems]]" title="Firecracker">
+<pre>!Overview
+
+Firecracker is an open source virtualization technology that is purpose-built for creating and managing secure, multi-tenant containers and functions-based services. Firecracker implements a virtual machine monitor (VMM) that uses the Linux Kernel-based Virtual Machine (KVM) to create and manage microVMs. Firecracker has a minimalist design. It excludes unnecessary devices and guest functionality to reduce the memory footprint and attack surface area of each microVM. Firecracker is written in Rust.
+
+Firecracker runs in user space and uses the Linux Kernel-based Virtual Machine (KVM) to create microVMs. The fast startup time and low memory overhead of each microVM enables you to pack thousands of microVMs onto the same machine. This means that every function or container group can be encapsulated with a virtual machine barrier, enabling workloads from different customers to run on the same machine, without any tradeoffs to security or efficiency. Firecracker is an alternative to QEMU, an established VMM with a general purpose and broad feature set that allows it to host a variety of guest operating systems.
+
+!Milestones
+
+Firecracker v. 0.11.0 was released on November 23, 2018.
+
+!Availability
+
+Firecracker is available under the Apache License 2.0.
+
+!Additional Information
+
+[[https://firecracker-microvm.github.io/]]
+
+</pre>
 </div>
 <div created="20160302010254199" modified="20160302010401740" tags="$:/tags/Macro" title="Footnotes Macro">
 <pre>\define ref(label)
