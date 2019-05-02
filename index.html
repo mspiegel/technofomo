@@ -263,6 +263,8 @@ Error message and password prompt
 
 <li>Timescale DB</li>
 
+<li>U-root</li>
+
 <li>USENIX Annual Technical Conference</li>
 
 <li>WebAssembly</li>
@@ -8902,7 +8904,7 @@ Error message and password prompt
 <div created="20181218153642666" modified="20181218153643626" title="$:/state/toc/TableOfContents-Filesystems--687205153">
 <pre>close</pre>
 </div>
-<div created="20181127181259225" modified="20190118181906035" title="$:/state/toc/TableOfContents-Operating Systems--687205153">
+<div created="20181127181259225" modified="20190502145243775" title="$:/state/toc/TableOfContents-Operating Systems--687205153">
 <pre>close</pre>
 </div>
 <div list="Welcome" title="$:/StoryList">
@@ -10093,6 +10095,38 @@ Time-series data is largely immutable. Writes primarily occur as new appends to 
 ---
 
 &lt;&lt;footnotes &quot;1&quot; &quot;https://www.timescale.com/how-it-works&quot;&gt;&gt;
+
+</pre>
+</div>
+<div created="20190502144419865" modified="20190502145205364" tags="[[Operating Systems]]" title="U-root">
+<pre>!Overview
+
+U-root is an embeddable root file system intended to be placed in a FLASH device as part of the firmware image, along with a Linux kernel.  The program source code is installed in the root file system contained in the firmware FLASH part and compiled on demand. All the u-root utilities, roughly corresponding to standard Unix utilities, are written in Go, a modern, type-safe language with garbage collection and language-level support for concurrency and inter-process communication.
+
+Unlike most embedded root file systems, which consist largely of binaries, U-root has only five: an init program and 4 Go compiler binaries. When a program is first run, it and any not-yet-built packages it uses are compiled to a RAM-based file system. The first invocation of a program takes a fraction of a second, as it is compiled. Packages are only compiled once, so the slow-est build is always the first one, on boot, which takes about 3 seconds. Subsequent invocations are very fast,usually a millisecond or so.
+
+U-root blurs the line between script-based distros such as Perl Linux and binary-based distros such as ~BusyBox; it has the flexibility of Perl Linux and the performance of ~BusyBox. Scripts and builtins are written in Go, not a shell scripting language. U-root is a new way to package and distribute file systems for embedded systems, and the use of Go promises a dramatic improvement in their security.
+
+Since the init program itself is only 132 lines of code and is easy to change, the structure is very flexible and allows for many use cases.
+
+* Additional binaries: if the 3 seconds it takes to get to a shell is too long (some applications such as automotive computing require 800 ms startup time),and there is room in FLASH, some programs can be precompiled into /bin.
+* Build it all on boot: if on-demand compilation is not desired, a background thread in the init process can build all the programs on boot.
+* Selectively remove binaries after use: if RAM space is at a premium, once booted, a script can remove everything in /bin; those things that are used will be rebuilt on demand.
+* Always build on demand: it is possible to run in a mode in which programs are never written to /bin and always rebuilt on demand; this mode is surprisingly comfortable to use, given that program compilation is so fast.
+* Lockdown: if desired, the system can be locked down once booted in one of several ways: the entire /src tree can be removed, for example, or just the compiler toolchain can be deleted.
+
+!Milestones
+
+u-root v. 4.0.0 was released on January 27, 2019.
+
+!Availability
+
+u-root is available under the BSD 3-Clause License.
+
+!Additional Information
+
+[[https://www.usenix.org/conference/atc15/technical-session/presentation/minnich]]
+[[https://github.com/u-root/u-root]]
 
 </pre>
 </div>
