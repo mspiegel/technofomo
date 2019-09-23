@@ -159,6 +159,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/toc/TableOfContents-Distributed Systems--687205153</li>
+
 <li>$:/state/toc/TableOfContents-Hardware--687205153</li>
 
 <li>$:/state/toc/TableOfContents-Testing--687205153</li>
@@ -284,6 +286,8 @@ Error message and password prompt
 <li>WebAssembly</li>
 
 <li>Welcome</li>
+
+<li>Weld</li>
 
 </ul>
 </p>
@@ -9265,13 +9269,16 @@ Error message and password prompt
 <div created="20160302003735931" modified="20160302004434365" title="$:/SiteTitle">
 <pre>Techno Fomo</pre>
 </div>
+<div created="20190923131238426" modified="20190923131644358" title="$:/state/toc/TableOfContents-Distributed Systems--687205153">
+<pre>close</pre>
+</div>
 <div created="20190712200612974" modified="20190712201913230" title="$:/state/toc/TableOfContents-Hardware--687205153">
 <pre>close</pre>
 </div>
 <div created="20190712200059250" modified="20190712200611730" title="$:/state/toc/TableOfContents-Testing--687205153">
 <pre>close</pre>
 </div>
-<div created="20190712201850550" list="Welcome" modified="20190712201850550" title="$:/StoryList">
+<div created="20190923131425732" list="Welcome" modified="20190923131425732" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10610,6 +10617,29 @@ Techno Fomo is a [[Tiddly Wiki|http://tiddlywiki.com/]] site hosted on ~GitHub p
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable &quot;TableOfContents&quot;&gt;&gt;
 &lt;/div&gt;</pre>
+</div>
+<div created="20190923131430330" modified="20190923131635669" tags="[[Distributed Systems]]" title="Weld">
+<pre>!Overview
+
+Weld is a runtime for improving the performance of data-intensive applications. It optimizes across libraries and functions by expressing the core computations in libraries using a small common intermediate representation, similar to CUDA and ~OpenCL.
+
+Modern analytics applications combine multiple functions from different libraries and frameworks to build complex workflows. Even though individual functions can achieve high performance in isolation, the performance of the combined workflow is often an order of magnitude below hardware limits due to extensive data movement across the functions. Weld’s take on solving this problem is to lazily build up a computation for the entire workflow, optimizing and evaluating it only when a result is needed.
+
+Weld can increase the performance of existing data analytics frameworks with little integration effort. For example, for Spark, ~NumPy, and ~TensorFlow, porting over a few Weld operators can increase performance by up to 30x even on some simple workloads!
+
+!Milestones
+
+Weld 0.3.0 released in August 2019
+
+!Availability
+
+Weld is available under a BSD license.
+
+!Additional Information
+
+[[https://www.weld.rs/]]
+
+</pre>
 </div>
 
 </div>
