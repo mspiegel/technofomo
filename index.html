@@ -159,6 +159,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/toc/TableOfContents-Databases--687205153</li>
+
 <li>$:/state/toc/TableOfContents-Distributed Systems--687205153</li>
 
 <li>$:/state/toc/TableOfContents-Hardware--687205153</li>
@@ -240,6 +242,8 @@ Error message and password prompt
 <li>Modelica</li>
 
 <li>NixOS</li>
+
+<li>Noria</li>
 
 <li>Operating Systems</li>
 
@@ -9269,6 +9273,9 @@ Error message and password prompt
 <div created="20160302003735931" modified="20160302004434365" title="$:/SiteTitle">
 <pre>Techno Fomo</pre>
 </div>
+<div created="20191022173616500" modified="20191022173844902" title="$:/state/toc/TableOfContents-Databases--687205153">
+<pre>close</pre>
+</div>
 <div created="20190923131238426" modified="20190923131644358" title="$:/state/toc/TableOfContents-Distributed Systems--687205153">
 <pre>close</pre>
 </div>
@@ -9278,7 +9285,7 @@ Error message and password prompt
 <div created="20190712200059250" modified="20190712200611730" title="$:/state/toc/TableOfContents-Testing--687205153">
 <pre>close</pre>
 </div>
-<div created="20190923131425732" list="Welcome" modified="20190923131425732" title="$:/StoryList">
+<div created="20191022173620397" list="Welcome" modified="20191022173620397" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10124,6 +10131,25 @@ Modelica is a language for modeling of physical systems, designed to support eff
 ---
 
 &lt;&lt;footnotes &quot;1&quot; &quot;https://nixos.org/nixos/about.html&quot;&gt;&gt;
+
+</pre>
+</div>
+<div created="20191022173624504" modified="20191022173833394" tags="Databases" title="Noria">
+<pre>!Overview
+
+Noria is a new streaming data-flow system designed to act as a fast storage backend for read-heavy web applications based on this paper from OSDI'18. It acts like a database, but precomputes and caches relational query results so that reads are blazingly fast. Noria automatically keeps cached results up-to-date as the underlying data, stored in persistent base tables, change. Noria uses partially-stateful data-flow to reduce memory overhead, and supports dynamic, runtime data-flow and query change.
+
+Noria comes with a ~MySQL adapter that implements the binary ~MySQL protocol. This lets any application that currently talks to ~MySQL or ~MariaDB switch to Noria with minimal effort. For example, running a Lobsters-like workload that issues the equivalent SQL queries to the real Lobsters website, Noria improves throughput supported by 5x
+
+At a high level, Noria takes a set of parameterized SQL queries (think prepared statements), and produces a data-flow program that maintains materialized views for the output of those queries. Reads now become fast lookups directly into these materialized views, as if the value had been directly cached in memcached. The views are then kept up-to-date incrementally through the data-flow, which yields high write throughput.
+
+!Availability
+
+Noria is available under the Apache License 2.0 and the MIT license.
+
+!Additional Information
+
+[[github.com/mit-pdos/noria|https://github.com/mit-pdos/noria]]
 
 </pre>
 </div>
