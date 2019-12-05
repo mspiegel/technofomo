@@ -285,6 +285,8 @@ Error message and password prompt
 
 <li>Single Assignment C</li>
 
+<li>SPDK</li>
+
 <li>Standards</li>
 
 <li>Strange Loop</li>
@@ -9294,7 +9296,7 @@ Error message and password prompt
 <div created="20190712200612974" modified="20191105184459996" title="$:/state/toc/TableOfContents-Hardware--687205153">
 <pre>close</pre>
 </div>
-<div created="20191105184335034" modified="20191105184336160" title="$:/state/toc/TableOfContents-Operating Systems--687205153">
+<div created="20191105184335034" modified="20191205202826598" title="$:/state/toc/TableOfContents-Operating Systems--687205153">
 <pre>close</pre>
 </div>
 <div created="20191105184339242" modified="20191105184340180" title="$:/state/toc/TableOfContents-Programming Languages--687205153">
@@ -9306,7 +9308,7 @@ Error message and password prompt
 <div created="20190712200059250" modified="20190712200611730" title="$:/state/toc/TableOfContents-Testing--687205153">
 <pre>close</pre>
 </div>
-<div created="20191105184345236" list="Welcome" modified="20191105185043418" title="$:/StoryList">
+<div created="20191205202606015" list="Welcome" modified="20191205202606015" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10561,6 +10563,33 @@ Permission to use this software is hereby granted free of charge for any non-pro
 ---
 
 &lt;&lt;footnotes &quot;1&quot; &quot;https://en.wikipedia.org/wiki/SAC_programming_language&quot;&gt;&gt;</pre>
+</div>
+<div created="20191205202610962" modified="20191205202818503" tags="[[Operating Systems]]" title="SPDK">
+<pre>!Overview
+
+The Storage Performance Development Kit (SPDK) provides a set of tools and libraries for writing high performance, scalable, user-mode storage applications. It achieves high performance through the use of a number of key techniques:
+
+* Moving all of the necessary drivers into userspace, which avoids syscalls and enables zero-copy access from the application.
+* Polling hardware for completions instead of relying on interrupts, which lowers both total latency and latency variance.
+* Avoiding all locks in the I/O path, instead relying on message passing.
+
+The bedrock of SPDK is a user space, polled-mode, asynchronous, lockless NVMe driver. This provides zero-copy, highly parallel access directly to an SSD from a user space application. The driver is written as a C library with a single public header.
+
+SPDK further provides a full block stack as a user space library that performs many of the same operations as a block stack in an operating system. This includes unifying the interface between disparate storage devices, queueing to handle conditions such as out of memory or I/O hangs, and logical volume management.
+
+!Milestones
+
+SPDK v19.10 was released on Oct 31, 2019.
+
+!Availability
+
+SPDK is available under a BSD license.
+
+!Additional Information
+
+&quot;&quot;&quot;
+[[https://spdk.io]]
+&quot;&quot;&quot;</pre>
 </div>
 <div created="20160719140710134" modified="20160719140809836" tags="TableOfContents" title="Standards">
 <pre>A technical standard is an established norm or requirement in regard to technical systems. It is usually a formal document that establishes uniform engineering or technical criteria, methods, processes and practices. In contrast, a custom, convention, company product, corporate standard, etc. that becomes generally accepted and dominant is often called a de facto standard.
