@@ -319,6 +319,8 @@ Error message and password prompt
 
 <li>Weld</li>
 
+<li>Wuffs</li>
+
 </ul>
 </p>
 
@@ -9323,7 +9325,7 @@ Error message and password prompt
 <div created="20200221140043949" modified="20200221140044638" title="$:/state/toc/TableOfContents-Operations--687205153">
 <pre>close</pre>
 </div>
-<div created="20191105184339242" modified="20191105184340180" title="$:/state/toc/TableOfContents-Programming Languages--687205153">
+<div created="20191105184339242" modified="20200903144900900" title="$:/state/toc/TableOfContents-Programming Languages--687205153">
 <pre>close</pre>
 </div>
 <div created="20191105184540190" modified="20200221140051056" title="$:/state/toc/TableOfContents-Security--687205153">
@@ -9335,7 +9337,7 @@ Error message and password prompt
 <div created="20190712200059250" modified="20190712200611730" title="$:/state/toc/TableOfContents-Testing--687205153">
 <pre>close</pre>
 </div>
-<div created="20200221140045598" list="Welcome" modified="20200221140352871" title="$:/StoryList">
+<div created="20200903144111830" list="Welcome" modified="20200903144111830" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10800,6 +10802,53 @@ Weld is available under a BSD license.
 [[https://www.weld.rs/]]
 
 </pre>
+</div>
+<div created="20200903144118481" modified="20200903144851214" tags="[[Programming Languages]]" title="Wuffs">
+<pre>!Overview
+
+Wuffs is a memory-safe programming language (and a standard library written in that language) for wrangling untrusted file formats safely. Wrangling includes parsing, decoding and encoding. Example file formats include images, audio, video, fonts and compressed archives.
+
+It is also fast. On many of its GIF decoding benchmarks, Wuffs measures 2x faster than &quot;giflib&quot; (C), 3x faster than &quot;image/gif&quot; (Go) and 7x faster than &quot;gif&quot; (Rust).
+
+Wuffs' goal is to produce software libraries that are as safe as Go or Rust, roughly speaking, but as fast as C, and that can be used anywhere C libraries are used. This includes very large C/C++ projects, such as popular web browsers and operating systems (using that term to include desktop and mobile user interfaces, not just the kernel).
+
+Wuffs the Library is available as transpiled C code. Other C/C++ projects can use that library without requiring the Wuffs the Language toolchain. Those projects can use Wuffs the Library like using any other third party C library. It's just not hand-written C.
+
+However, unlike hand-written C, Wuffs the Language is safe with respect to buffer overflows, integer arithmetic overflows and null pointer dereferences. A key difference between Wuffs and other memory-safe languages is that all such checks are done at compile time, not at run time. If it compiles, it is safe, with respect to those three bug classes.
+
+The trade-off in aiming for both safety and speed is that Wuffs programs take longer for a programmer to write, as they have to explicitly annotate their programs with proofs of safety. A statement like x += 1 unsurprisingly means to increment the variable x by 1. However, in Wuffs, such a statement is a compile time error unless the compiler can also prove that x is not the maximal value of x's type (e.g. x is not 255 if x is a base.u8), as the increment would otherwise overflow. Similarly, an integer arithmetic expression like x / y is a compile time error unless the compiler can also prove that y is not zero.
+
+Wuffs is not a general purpose programming language. It is for writing libraries, not programs. The idea isn't to write your whole program in Wuffs, only the parts that are both performance-conscious and security-conscious. For example, while technically possible, it is unlikely that a Wuffs compiler would be worth writing entirely in Wuffs.
+
+Wuffs the language is an imperative C-like memory-safe language that should look roughly familiar to somebody versed in one of C, C++, Go, Java, ~JavaScript, Rust, etc&lt;&lt;ref &quot;1&quot;&gt;&gt;. The major differentiating features are:
+
+* Facts and compile-time assertions.
+* Type refinements.
+* Coroutines and an effects system. The ! and ? exclamation and question marks denote impure and coroutine effects.
+* No way to dynamically allocate or free memory.
+
+Wuffs' standard library consists of multiple packages, each implementing a particular file format or algorithm&lt;&lt;ref &quot;2&quot;&gt;&gt;. Those packages can be grouped into several categories:
+
+* Compression Decoders.
+* Hashers.
+* Image Decoders.
+
+!Milestones
+
+Wuffs 0.2.0 was released December 2019
+
+!Availability
+
+Wuffs is distributed under an Apache 2 license.
+
+!Additional Information
+
+[[Wuffs|https://github.com/google/wuffs/]]
+
+---
+
+&lt;&lt;footnotes &quot;1&quot; &quot;https://github.com/google/wuffs/blob/master/doc/wuffs-the-language.md&quot;&gt;&gt;
+&lt;&lt;footnotes &quot;2&quot; &quot;https://github.com/google/wuffs/blob/master/doc/wuffs-the-library.md&quot;&gt;&gt;</pre>
 </div>
 
 </div>
