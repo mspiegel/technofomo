@@ -233,6 +233,8 @@ Error message and password prompt
 
 <li>Footnotes Stylesheet</li>
 
+<li>Futhark</li>
+
 <li>Go</li>
 
 <li>Goss</li>
@@ -9339,7 +9341,7 @@ Error message and password prompt
 <div created="20190712200059250" modified="20190712200611730" title="$:/state/toc/TableOfContents-Testing--687205153">
 <pre>close</pre>
 </div>
-<div created="20201009185107217" list="Welcome" modified="20201009185107217" title="$:/StoryList">
+<div created="20221115014837647" list="Welcome" modified="20221115014950670" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9387,11 +9389,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1536&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;864&quot;
         }
     }
 }</pre>
@@ -9852,6 +9854,31 @@ padding: 5px;
 }
 
 tc-drop-down a {display:inline;padding:0}</pre>
+</div>
+<div created="20221115014957418" modified="20221115015329855" tags="[[Programming Languages]]" title="Futhark">
+<pre>!Overview
+
+Futhark is a small programming language designed to be compiled to efficient parallel code. It is a statically typed, data-parallel, and purely functional array language in the ML family, and comes with a heavily optimising ahead-of-time compiler that presently generates either GPU code via CUDA and ~OpenCL, or multi-threaded CPU code.
+
+Futhark is not designed for graphics programming, but can instead use the compute power of the GPU to accelerate data-parallel array computations. The language supports regular nested data-parallelism, as well as a form of imperative-style in-place modification of arrays, while still preserving the purity of the language via the use of a uniqueness type system.
+
+While the Futhark language and compiler is an ongoing research project, it is quite usable for real programming, and can compile nontrivial programs which then run on real machines at high speed.
+
+Futhark is a simple language and is designed to be easy to learn, although it omits some common features in order to generate high-performance parallel code. Nevertheless, Futhark can already be used for nontrivial programs. We are actively looking for more potential applications as well as people who are interested in contributing to the language design.
+
+!Milestones
+
+Futhark is an active research project (as of late 2022)
+
+!Availability
+
+Futhark is distributed under an ISC license.
+
+!Additional Information
+
+[[Futhark|https://futhark-lang.org/]]
+
+---</pre>
 </div>
 <div created="20160302152407598" modified="20160611021739347" tags="[[Programming Languages]]" title="Go">
 <pre>!Overview
