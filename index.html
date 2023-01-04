@@ -159,6 +159,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/Link/--1006337299/search</li>
+
 <li>$:/state/toc/TableOfContents-Data Encoding--687205153</li>
 
 <li>$:/state/toc/TableOfContents-Data Structures--687205153</li>
@@ -174,6 +176,8 @@ Error message and password prompt
 <li>$:/state/toc/TableOfContents-Operating Systems--687205153</li>
 
 <li>$:/state/toc/TableOfContents-Operations--687205153</li>
+
+<li>$:/state/toc/TableOfContents-Programming Languages--118161433</li>
 
 <li>$:/state/toc/TableOfContents-Programming Languages--687205153</li>
 
@@ -198,6 +202,8 @@ Error message and password prompt
 <li>Apache Calcite</li>
 
 <li>Apache Spark</li>
+
+<li>Austral</li>
 
 <li>BetrFS</li>
 
@@ -244,6 +250,8 @@ Error message and password prompt
 <li>gRPC</li>
 
 <li>Hardware</li>
+
+<li>Hermit: Deterministic Linux</li>
 
 <li>Hydra</li>
 
@@ -9305,6 +9313,9 @@ Error message and password prompt
 <div created="20160302003735931" modified="20160302004434365" title="$:/SiteTitle">
 <pre>Techno Fomo</pre>
 </div>
+<div created="20230104043027360" modified="20230104043029651" title="$:/state/Link/--1006337299/search">
+<pre></pre>
+</div>
 <div created="20200221140351546" modified="20200221140500603" title="$:/state/toc/TableOfContents-Data Encoding--687205153">
 <pre>close</pre>
 </div>
@@ -9329,7 +9340,10 @@ Error message and password prompt
 <div created="20200221140043949" modified="20200221140044638" title="$:/state/toc/TableOfContents-Operations--687205153">
 <pre>close</pre>
 </div>
-<div created="20191105184339242" modified="20200903144900900" title="$:/state/toc/TableOfContents-Programming Languages--687205153">
+<div created="20230104043219429" modified="20230104043221549" title="$:/state/toc/TableOfContents-Programming Languages--118161433">
+<pre>close</pre>
+</div>
+<div created="20191105184339242" modified="20230104043214347" title="$:/state/toc/TableOfContents-Programming Languages--687205153">
 <pre>close</pre>
 </div>
 <div created="20191105184540190" modified="20200221140051056" title="$:/state/toc/TableOfContents-Security--687205153">
@@ -9338,10 +9352,10 @@ Error message and password prompt
 <div created="20200221140028196" modified="20200221140107846" title="$:/state/toc/TableOfContents-Standards--687205153">
 <pre>close</pre>
 </div>
-<div created="20190712200059250" modified="20190712200611730" title="$:/state/toc/TableOfContents-Testing--687205153">
+<div created="20190712200059250" modified="20230104042300483" title="$:/state/toc/TableOfContents-Testing--687205153">
 <pre>close</pre>
 </div>
-<div created="20221115014837647" list="Welcome" modified="20221115014950670" title="$:/StoryList">
+<div created="20230104041829938" list="Welcome" modified="20230104042308250" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9599,6 +9613,37 @@ Apache Spark is available under the Apache License 2.0.
 In-Memory Cluster Computing (Zaharia et al, 2011)&quot;&gt;&gt;
 
 </pre>
+</div>
+<div created="20230104042320436" modified="20230104043159911" tags="[[Programming Languages]]" title="Austral">
+<pre>!Overview
+
+Austral is a systems programming language. It uses linear types to provide memory safety and capability-secure code, and is designed to be simple enough to be understood by a single person, with a focus on readability, maintainbility, and modularity.
+
+Austral features:
+
+* Strong, static type system that’s not too big-brained.
+* Type system which allows resources to be handled correctly and safely without runtime overhead. “Resource” here means memory and anything that has an explicit lifecycle of create-use-destroy: file handles, sockets, database handles.
+* Capability-based security, which prevents supply chain attacks. Your left-pad dependency can’t be compromised to upload the contents of your disk to a remote server. This is because code that performs network access has to be explicitly given a network capability, code that performs filesystem access needs a filesystem capability, etc. A string-padding function that claims to need network access instantly stands out. Capabilities are unforgeable, secure authorization tokens for code.
+* Strong, Ada-inspired module system which is not tied to filesystem structure and which separates module interfaces from implementations.
+* Sum types with pattern matching and exhaustiveness checking.
+* Type classes, as in Haskell, for restricted function overloading. As in Haskell, type parameters can be constrained to only accept types that implement a given typeclass.
+* Strict, context-free, unambiguous syntax, informed by langsec ideas.
+
+!Milestones
+
+Austral 0.1.0 was released on Sep 2, 2022
+
+!Availability
+
+Austral is licensed under the GPLv3 license. 
+
+!Additional Information
+
+[[Introduction|https://borretti.me/article/introducing-austral]]
+
+[[GitHub|https://github.com/austral/austral]]
+
+---</pre>
 </div>
 <div created="20181015143503766" modified="20181015144121441" tags="Filesystems" title="BetrFS">
 <pre>!Overview
@@ -10039,6 +10084,26 @@ gRPC is available under a BSD license.
 &lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable &quot;Hardware&quot;&gt;&gt;
 &lt;/div&gt;</pre>
+</div>
+<div created="20230104041833434" modified="20230104042241460" tags="Testing" title="Hermit: Deterministic Linux">
+<pre>!Overview
+
+Hermit forces deterministic execution of arbitrary programs and acts like a reproducible container. That is, it hermetically isolates the program from sources of non-determinism such as time, thread interleavings, random number generation, etc. Guaranteed determinism is a powerful tool and it serves as a basis for a number of applications, including concurrency stress testing, record/replay, reproducible builds, and automatic diagnosis of concurrency bugs, and more.
+
+Hermit cannot isolate the guest program from sources of non-determinism such as file system changes or external network responses. Instead, in order to provide complete determinism, the user should provide a fixed file system base image (e.g., with Docker) and disable external networking.
+
+Hermit sits between the guest process and the OS intercepting system calls made by the guest. In some cases, it can completely replace the functionality of the kernel and suppress the original system call. In other cases, it forwards the system call to the kernel and sanitizes the response such that it is made deterministic.
+
+!Availability
+
+Hermit is available under the BSD 3-Clause License.
+
+!Additional Information
+
+[[https://developers.facebook.com/blog/post/2022/11/22/hermit-deterministic-linux-testing/]]
+
+[[https://github.com/facebookexperimental/hermit/]]
+</pre>
 </div>
 <div created="20160930122759597" modified="20160930123337331" tags="[[Distributed Systems]]" title="Hydra">
 <pre>!Overview
